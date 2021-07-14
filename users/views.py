@@ -1,8 +1,6 @@
 from http.client import responses
 from rest_framework.exceptions import AuthenticationFailed
 from .models import User
-from rest_framework import serializers
-from rest_framework.serializers import Serializer
 from users.serializer import UserSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -15,7 +13,12 @@ class RegisterView(APIView):
         serializer = UserSerializer(data = request.data)
         serializer.is_valid(raise_exception= True)
         serializer.save()
-        return Response(serializer.data)
+        response = Response({
+            "serializer": serializer.data,
+            "status":201,
+            "message": "User Created Successfull",
+        })
+        return response
 
 class LoginView(APIView):
     def post(self,request):
@@ -40,7 +43,8 @@ class LoginView(APIView):
         response = Response()
         response.set_cookie(key ='jwt', value = token, httponly=True)
         response.data = {
-            'jwt':token
+            'message':"Successfully logged in",
+            'status':200
         }
 
         return response
@@ -59,8 +63,17 @@ class UserView(APIView):
         
         user = User.objects.filter(id = payload['id']).first()
         serializer = UserSerializer(user)
+        hello = f"Hello {user.name}"
 
-        return Response(token)
+        return Response({
+            "jwt":token,
+            "message":hello,
+            "status":200})
+
+
+class EditProfileView(APIView):
+    def post(self,request):
+        pass
 
 
 class LogoutView(APIView):
