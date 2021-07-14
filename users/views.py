@@ -66,14 +66,38 @@ class UserView(APIView):
         hello = f"Hello {user.name}"
 
         return Response({
-            "jwt":token,
-            "message":hello,
+            "message":serializer.data,
             "status":200})
 
 
 class EditProfileView(APIView):
     def post(self,request):
-        pass
+        token = request.COOKIES.get('jwt')
+
+        if not token:
+            raise AuthenticationFailed("Unauthenticated")
+        try:
+            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed("Unauthenticated")
+        
+        user = User.objects.filter(id = payload['id']).first()
+        name_ = request.data['name']
+        age_ = request.data['age']
+        phoneno_ = request.data['phoneno']
+
+        user.name = name_ 
+        user.age = age_
+        user.phoneno = phoneno_
+        user.save()
+
+        response = Response({
+            "message": "Your Profile Updated Successfully",
+            "status":200
+        })
+        return response
+
+
 
 
 class LogoutView(APIView):
