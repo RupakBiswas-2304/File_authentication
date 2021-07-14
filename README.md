@@ -28,10 +28,10 @@
 #### Below the screenshots are added :
 
 ###### Successfull Register
-![App Screenshot](screenshots\register_success.png)
+![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/register_success.png)
 
 ###### Trying to register with the same email id which gives error
-![App Screenshot](screenshots\register_failed.png)
+![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/register_failed.png)
 
 ###### Successfull login which gives a "jwt" token valid for 60 min
-![App Screenshot](screenshots\login.png)
+![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/login.png)
