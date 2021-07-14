@@ -1,0 +1,4 @@
+pyjwt
+django restframework
+
+django-cors-headers
