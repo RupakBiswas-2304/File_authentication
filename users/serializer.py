@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User
+from .models import User,Image_Upload
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,4 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-  
+class FileSerializer(serializers.ModelSerializer):
+    class Meta():
+        model = Image_Upload
+        fields = [ 'user','title','image']

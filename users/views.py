@@ -1,10 +1,12 @@
 from http.client import responses
 from rest_framework.exceptions import AuthenticationFailed
 from .models import User
-from users.serializer import UserSerializer
+from users.serializer import UserSerializer,FileSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import jwt,datetime
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework import status
 
 # Create your views here.
 
@@ -108,3 +110,36 @@ class LogoutView(APIView):
             "message": "success",
         }
         return response
+
+
+class FileView(APIView):
+
+    parser_classes = (MultiPartParser, FormParser)
+    def post(self, request, *args, **kwargs):
+
+        token = request.COOKIES.get('jwt')
+
+        if not token:
+            raise AuthenticationFailed("Unauthenticated")
+        try:
+            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed("Unauthenticated")
+
+        
+        a = int(payload['id'])
+        b = int(request.data['user'])
+        if(a==b):
+
+            file_serializer = FileSerializer(data=request.data)
+            if file_serializer.is_valid():
+                file_serializer.save()
+                return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+            else:
+                # print("Serializer not valid")
+                return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response({
+                "message":"Wrong Id",
+                "status":405
+            })
