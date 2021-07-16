@@ -52,3 +52,6 @@
 
 ###### at endpoint '/api/listview' here is list view of all user's images [ this page can be access only afetr login ]
 ![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/lisy_of_images.png)
+
+#### The delete image ALI : this takes two argument -> image id and image url
+![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/image_delete.png)

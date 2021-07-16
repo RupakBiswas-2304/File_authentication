@@ -184,3 +184,32 @@ class ListAllImage(APIView):
             "data":response
         })
 
+class DeleteImage(APIView):
+    def post(self,request):
+        token = request.COOKIES.get('jwt')
+
+        if not token:
+            raise AuthenticationFailed("Unauthenticated")
+        try:
+            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed("Your Token Expired")
+        a = (request.data['image'])
+        B =  a.split('/')
+        k = int((B[2].split('_'))[1])
+        l = int(payload['id'])
+
+        if(k==l):
+
+
+            img = Image_Upload.objects.filter(id = request.data['id']).first()
+            img.delete()
+
+            return Response({
+                "message":"image deleted Successfully"
+            })
+        else:
+            return Response({
+                "message":"Can't delete other user's image"
+            })
+        

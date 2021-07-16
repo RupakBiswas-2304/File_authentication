@@ -1,4 +1,4 @@
-from .views import RegisterView,LoginView,UserView,LogoutView,EditProfileView,FileView,ListAllImage
+from .views import RegisterView,LoginView,UserView,LogoutView,EditProfileView,FileView,ListAllImage,DeleteImage
 from django.urls import path
 from django.conf.urls import url
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('logout',LogoutView.as_view()),
     path('upload', FileView.as_view()),
     path('listview', ListAllImage.as_view()),
+    path('deleteimage', DeleteImage.as_view()),
 ]
