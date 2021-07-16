@@ -1,14 +1,25 @@
 from http.client import responses
 from rest_framework.exceptions import AuthenticationFailed
-from .models import User
+from .models import User,Image_Upload
 from users.serializer import UserSerializer,FileSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import jwt,datetime
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import status
+from django.views import View
+from django.http import FileResponse
+from django.conf import settings
 
 # Create your views here.
+
+def is_loggedin(token):
+        if not token:
+            raise AuthenticationFailed("Unauthenticated")
+        try:
+            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed("Unauthenticated")
 
 class RegisterView(APIView):
     def post(self, request):
@@ -143,3 +154,14 @@ class FileView(APIView):
                 "message":"Wrong Id",
                 "status":405
             })
+
+
+class DocumentDownload(View): # view for displaying images only to autherized pleople 
+    def get(self, request, relative_path):
+        token = request.COOKIES.get('jwt')
+        is_loggedin(token)
+        
+        absolute_path = '{}/{}'.format(settings.MEDIA_ROOT, relative_path)
+        response = FileResponse(open(absolute_path, 'rb'), as_attachment=True)
+        return response
+
