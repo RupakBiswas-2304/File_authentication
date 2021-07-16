@@ -49,3 +49,6 @@
 ###### also screen shot for unauthenticated user 
 
 ![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/photo_access_failure.png)
+
+###### at endpoint '/api/listview' here is list view of all user's images [ this page can be access only afetr login ]
+![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/lisy_of_images.png)

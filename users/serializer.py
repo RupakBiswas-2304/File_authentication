@@ -20,4 +20,4 @@ class UserSerializer(serializers.ModelSerializer):
 class FileSerializer(serializers.ModelSerializer):
     class Meta():
         model = Image_Upload
-        fields = [ 'user','title','image']
+        fields = [ 'id','user','title','image']

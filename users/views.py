@@ -165,3 +165,22 @@ class DocumentDownload(View): # view for displaying images only to autherized pl
         response = FileResponse(open(absolute_path, 'rb'), as_attachment=True)
         return response
 
+class ListAllImage(APIView):
+    def get(self, request):
+        token = request.COOKIES.get('jwt')
+
+        if not token:
+            raise AuthenticationFailed("Unauthenticated")
+        try:
+            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            raise AuthenticationFailed("Your Token Expired")
+
+        images = Image_Upload.objects.all()
+        response = []
+        for i in images :
+            response.append(FileSerializer(i).data)
+        return Response({
+            "data":response
+        })
+
