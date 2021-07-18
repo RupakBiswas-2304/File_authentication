@@ -95,9 +95,23 @@ class EditProfileView(APIView):
             raise AuthenticationFailed("Unauthenticated")
         
         user = User.objects.filter(id = payload['id']).first()
-        name_ = request.data['name']
-        age_ = request.data['age']
-        phoneno_ = request.data['phoneno']
+
+        try:
+            name_ = request.data['name']
+        except:
+            name_ = user.name
+        
+        try:
+            age_ = request.data['age']
+        except:
+            age_ = user.age
+
+        try: 
+            phoneno_ = request.data['phoneno']
+        except:
+            phoneno_ = user.phoneno
+
+        
 
         user.name = name_ 
         user.age = age_
