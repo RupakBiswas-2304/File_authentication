@@ -43,3 +43,10 @@
     
     color: rgb(255, 255, 255);
 }
+
+/* The switch - the box around the slider */
+button{
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.705);
+  border: none;
+}

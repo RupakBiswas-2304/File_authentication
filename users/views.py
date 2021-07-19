@@ -155,7 +155,6 @@ class FileView(APIView):
         a = int(payload['id'])
         b = int(request.data['user'])
         if(a==b):
-
             file_serializer = FileSerializer(data=request.data)
             if file_serializer.is_valid():
                 file_serializer.save()

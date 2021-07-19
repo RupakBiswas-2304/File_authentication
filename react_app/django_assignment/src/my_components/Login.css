@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+/* Sign up form  */
+
+.signupform{
+    width: 50%;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 3px solid rgba(255, 255, 255, 0.151);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+}
+.signupform .head{
+    /* height: 80%; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 2em;
+}
+.signupform .form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-40px);
+}
+.signupform .form form ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signupform .form form button{
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.3em;
+    background-color: rgba(245, 245, 245, 0.233);
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 3px;
+    
+}
+
+.signupform .form form ul li{
+    list-style: none;
+    margin: 3px;
+}
+
+.signupform .form form .mform{
+    display: flex;
+
+}
+#formlist1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;  
+    margin: -20px;
+    padding: 1px; 
+    transform: translateY(-5px);
+}
+#formlist1 li{
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1em;
+    margin: 4px;
+}
+input{
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.253);
+    border: 0;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+input:focus { 
+    outline: none !important;
+    border-color: #e77979;
+    color: rgba(0, 0, 0, 0.527);
+    box-shadow: 0 0 10px #fdb49e;
+    font-family: 'Quicksand', sans-serif;
+}

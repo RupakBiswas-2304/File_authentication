@@ -1,7 +1,25 @@
-.App {
+.App{
   text-align: center;
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark {
+  background:
+    radial-gradient(circle at 50% 0,
+    #380036,
+    rgba(255,0,0,0) 70.71%),
+  radial-gradient(circle at 6.7% 75%,
+  #0cbaba,
+    rgba(0,0,255,0) 70.71%),
+  radial-gradient(circle at 93.3% 75%,
+  #04619f,
+    rgba(0,255,0,0) 70.71%) rgba(44, 44, 40, 0.685);
+}
+
+.light{
   background:
     radial-gradient(circle at 50% 0,
     rgba(255,0,0,.5),
@@ -12,9 +30,6 @@
   radial-gradient(circle at 93.3% 75%,
     rgba(0,255,0,.5),
     rgba(0,255,0,0) 70.71%) beige;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
 }
 
 
