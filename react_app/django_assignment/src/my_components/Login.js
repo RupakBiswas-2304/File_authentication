@@ -1,6 +1,6 @@
 import React from 'react'
-import './Login.css'
-// import axios from "axios";
+import './css/Login.css'
+import axios from "axios";
 // import { API_URL } from '../constants'
 
 class Signup extends React.Component{
@@ -26,14 +26,22 @@ class Signup extends React.Component{
         })
     }
     submitform =(event) => {
-        console.log(`
-            Email: ${this.state.email}
-            Password: ${this.state.password}`)
-        this.setState({   
-            email:'',
-            password:'',
+        // console.log(this.state)
+        axios({
+            method: 'post',
+            url: 'http://127.0.0.1:8000/api/login',
+            data: this.state
+          }).then(Response => {
+            console.log(Response)
+            console.log(Response.data.status)
         })
-       
+        .catch(error =>{
+            console.log(error)
+        });
+        this.setState({
+            email:'',
+            password:''
+        })
         event.preventDefault()
     }
 

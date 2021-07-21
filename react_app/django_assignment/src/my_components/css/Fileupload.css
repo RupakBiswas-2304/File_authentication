@@ -1,0 +1,69 @@
+.fileupload{
+    background-color: rgba(255, 255, 255, 0.267);
+    position: absolute;
+    top: 85px;
+    right: -5px;
+    background-color: rgba(255, 255, 255, 0.247);
+    width: calc(35%);
+    height: 30vh;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+    color: rgba(255, 255, 255, 0.808);
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+
+.fileupload form label{
+    margin: 0;
+    padding: 0;
+}
+
+.fileupload form button{
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 2px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+}
+#filefield label{
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 2px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+}
+.fileupload form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+
+.fileupload form button{
+    background-color: rgba(255, 255, 255, 0.068);
+    color: rgba(255, 255, 255, 0.808);
+    font-family: 'Encode Sans SC', sans-serif;
+    margin: 5px;
+}
+#zzxfc input {
+    /* visibility: hidden; */
+    margin: 5px;
+    /* width: 1px; */
+}
+
+/* #zzxfc{
+    border: 5px solid white;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+
+} */
+/* #zzxfc span{
+    position: absolute;
+    top:70px;
+    left: 30px;
+    font-size: 5em;
+    color: #fff;
+} */

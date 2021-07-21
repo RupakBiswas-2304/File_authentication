@@ -1,5 +1,5 @@
 import React from 'react'
-import './Signup.css'
+import './css/Signup.css'
 // import axios from "axios";
 // import { API_URL } from '../constants'
 
@@ -11,7 +11,7 @@ class Signup extends React.Component{
             name :'',
             email:'',
             phoneno:'',
-            age:0,
+            age:'',
             password:'',
         }
         

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css';
+import './css/Navbar.css';
 
 class Navbar extends React.Component {
 
@@ -9,8 +9,6 @@ class Navbar extends React.Component {
             buttonon:0,
             currentview:"signup",
         }
-        this.handleclick.bind(this);
-        this.handlemainview.bind(this);
     }
 
     handleclick = (event) => {
@@ -26,6 +24,8 @@ class Navbar extends React.Component {
             })
             this.props.stateofparent("light");
         }
+        console.log(this.props.loginstatus)
+        console.log(typeof(this.props.loginstatus))
         // event.preventDefault
     }
 
@@ -33,8 +33,35 @@ class Navbar extends React.Component {
         let k  = event.target.value
         this.props.stateofmainview(k)
     }
+    
 
     render(){
+
+    let content;
+    if (!this.props.loginstatus){
+        content = <>
+                    <li>
+                        <button onClick = {this.handlemainview} value="signup">SIGN UP</button>
+                    </li>
+                    <li>
+                        <button onClick = {this.handlemainview} value="login">LOG IN</button>
+                    </li>
+                </>
+    }
+    else{
+        content = <>
+                    <li>
+                        <button onClick = {this.handlemainview} value="home">Home</button>
+                    </li>
+                    <li>
+                        <button onClick = {this.handlemainview} value="profile">Profile</button>
+                    </li>
+                    <li>
+                        <button onClick = {this.handlemainview} value="logout">Log Out</button>
+                    </li>
+                </>
+    }
+    
     return (
         <div className="nav">
             <div className="logo">
@@ -44,12 +71,7 @@ class Navbar extends React.Component {
             </div>
             <div className="items">
                 <ul>
-                    <li>
-                        <button onClick = {this.handlemainview} value="signup">SIGN UP</button>
-                    </li>
-                    <li>
-                        <button onClick = {this.handlemainview} value="login">LOG IN</button>
-                    </li>
+                    {content}
                     <li>
                         <button onClick = {this.handleclick} value={this.state.buttonon}>Theme</button>
                     </li>
