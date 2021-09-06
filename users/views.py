@@ -10,8 +10,11 @@ from rest_framework import status
 from django.views import View
 from django.http import FileResponse
 from django.conf import settings
+from datetime import timezone
 
 # Create your views here.
+
+
 
 def is_loggedin(token):
         if not token:
@@ -58,7 +61,7 @@ class LoginView(APIView):
             'iat':datetime.datetime.utcnow()
         }
 
-        token = jwt.encode(payload, 'secret', algorithm='HS256')
+        token = jwt.encode(payload, 'Zimbra@@$tuuigdiu7785fgbdd4g', algorithm='HS256')
         response = Response()
         response.set_cookie(key ='jwt', value = token, httponly=True)
         response.data = {
@@ -73,16 +76,22 @@ class UserView(APIView):
         token = request.COOKIES.get('jwt')
 
         if not token:
-            raise AuthenticationFailed("Unauthenticated")
+            return Response({
+                'message':"Unauthenticated",
+                'status':403
+            })
 
         try:
-            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+            payload = jwt.decode(token, 'Zimbra@@$tuuigdiu7785fgbdd4g', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
-            raise AuthenticationFailed("Unauthenticated")
+            return Response({
+                'message':"Your session expired",
+                'status':401
+            })
         
         user = User.objects.filter(id = payload['id']).first()
         serializer = UserSerializer(user)
-        hello = f"Hello {user.name}"
+        # hello = f"Hello {user.name}"
 
         return Response({
             "message":serializer.data,
@@ -96,7 +105,7 @@ class EditProfileView(APIView):
         if not token:
             raise AuthenticationFailed("Unauthenticated")
         try:
-            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+            payload = jwt.decode(token, 'Zimbra@@$tuuigdiu7785fgbdd4g', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Unauthenticated")
         
@@ -139,6 +148,7 @@ class LogoutView(APIView):
         response.delete_cookie('jwt')
         response.data = {
             "message": "success",
+            "status":200
         }
         return response
 
@@ -153,7 +163,7 @@ class FileView(APIView):
         if not token:
             raise AuthenticationFailed("Unauthenticated")
         try:
-            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+            payload = jwt.decode(token, 'Zimbra@@$tuuigdiu7785fgbdd4g', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Unauthenticated")
 
@@ -191,7 +201,7 @@ class ListAllImage(APIView):
         if not token:
             raise AuthenticationFailed("Unauthenticated")
         try:
-            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+            payload = jwt.decode(token, 'Zimbra@@$tuuigdiu7785fgbdd4g', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Your Token Expired")
 
@@ -210,7 +220,7 @@ class DeleteImage(APIView):
         if not token:
             raise AuthenticationFailed("Unauthenticated")
         try:
-            payload = jwt.decode(token, 'secret', algorithms=['HS256'])
+            payload = jwt.decode(token, 'Zimbra@@$tuuigdiu7785fgbdd4g', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Your Token Expired")
         a = (request.data['image'])

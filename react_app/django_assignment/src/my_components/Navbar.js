@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/Navbar.css';
-
+import axios from "axios";
 class Navbar extends React.Component {
 
     constructor(props){
@@ -24,8 +24,6 @@ class Navbar extends React.Component {
             })
             this.props.stateofparent("light");
         }
-        console.log(this.props.loginstatus)
-        console.log(typeof(this.props.loginstatus))
         // event.preventDefault
     }
 
@@ -33,7 +31,27 @@ class Navbar extends React.Component {
         let k  = event.target.value
         this.props.stateofmainview(k)
     }
-    
+    handlelogout = (event) =>{
+        axios({
+            method: 'post',
+            url: 'http://127.0.0.1:8000/api/logout',
+          }).then(Response => {
+            console.log(Response)
+            console.log(Response.data.status)
+            if((Response.data.status) === 200){
+                this.props.stateofloggedin(false)
+            }
+            else(
+                alert(Response.data.message)
+            )
+        })
+        .catch(error =>{
+            console.log(error)
+        });
+
+        let k  = event.target.value
+        this.props.stateofmainview(k)
+    }
 
     render(){
 
@@ -57,7 +75,7 @@ class Navbar extends React.Component {
                         <button onClick = {this.handlemainview} value="profile">Profile</button>
                     </li>
                     <li>
-                        <button onClick = {this.handlemainview} value="logout">Log Out</button>
+                        <button onClick = {this.handlelogout} value="signup">Log Out</button>
                     </li>
                 </>
     }

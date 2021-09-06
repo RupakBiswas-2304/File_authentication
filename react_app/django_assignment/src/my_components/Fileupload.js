@@ -9,7 +9,7 @@ class Fileupload extends React.Component{
                 <h2>Upload File</h2>
 
                 <form>
-                    <lable><input type="hidden" name=""/></lable>
+                    <label><input type="hidden" name="" value = {this.props.id}/></label>
                     <label id="zzxfc"> <input type="file" src="" alt="" id="filefield"/></label>
                     <label> Title    <input type="text" name="" /></label>
 

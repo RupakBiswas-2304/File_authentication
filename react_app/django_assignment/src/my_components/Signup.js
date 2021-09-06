@@ -1,6 +1,6 @@
 import React from 'react'
 import './css/Signup.css'
-// import axios from "axios";
+import axios from "axios";
 // import { API_URL } from '../constants'
 
 class Signup extends React.Component{
@@ -47,17 +47,28 @@ class Signup extends React.Component{
         let v = this.isNumeric(this.state.phoneno)
 
         if(v){
-            console.log(`Name : ${this.state.name}
-                     Email: ${this.state.email}
-                     phoneno:${this.state.phoneno}
-                     Age:${this.state.age}
-                     Password: ${this.state.password}
-                     validation: ${v}`)
+            axios({
+                method: 'post',
+                url: 'http://127.0.0.1:8000/api/register',
+                data: this.state
+              }).then(Response => {
+                console.log(Response)
+                console.log(Response.data.status)
+                if((Response.data.status) === 201){
+                    alert("You have successfully registerd")
+                }
+                else(
+                    alert(Response.data.message)
+                )
+            })
+            .catch(error =>{
+                console.log(error)
+            });
             this.setState({
                 name :'',
                 email:'',
                 phoneno:'',
-                age:0,
+                age:'',
                 password:'',
             })
         }

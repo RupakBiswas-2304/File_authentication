@@ -11,7 +11,6 @@ class Signup extends React.Component{
             email:'',
             password:'',
         }
-        
     }
 
     ChangeEmail = (event)=> {
@@ -27,17 +26,41 @@ class Signup extends React.Component{
     }
     submitform =(event) => {
         // console.log(this.state)
-        axios({
-            method: 'post',
-            url: 'http://127.0.0.1:8000/api/login',
-            data: this.state
-          }).then(Response => {
-            console.log(Response)
-            console.log(Response.data.status)
+        // var axios = require('axios');
+        var data = JSON.stringify({
+        "email": this.state.email,
+        "password": this.state.password
+        });
+
+        var config = {
+        method: 'post',
+        url: 'http://127.0.0.1:8000/api/login',
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        data : data
+        };
+
+        axios(config)
+        .then(Response => {
+            // console.log(Response)
+            // console.log(Response.data.jwt)
+            let p = Response.data.jwt
+            let q = `jwt=${p}`
+            console.log(typeof(q))
+            if((Response.data.status) === 200){
+                this.props.stateofloggedin(true)
+                this.props.stateofmainview("home")
+                this.props.Changetoken(q)
+            }
+            else(
+                alert(Response.data.message)
+            )
         })
         .catch(error =>{
             console.log(error)
         });
+
         this.setState({
             email:'',
             password:''
