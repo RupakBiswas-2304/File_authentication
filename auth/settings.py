@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'new_database',
         'USER': 'root',
-        'PASSWORD': 'Zimbra2001',
+        'PASSWORD': '14232001',
         'HOST':'127.0.0.1',
         'PORT':'3306',
     }

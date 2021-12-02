@@ -151,3 +151,7 @@ dmypy.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Default ignored files
+/shelf/
+/workspace.xml
