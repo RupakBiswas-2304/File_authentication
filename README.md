@@ -1,57 +1,48 @@
-# Django_assignment
 
-### To Run this project:
-    [1] Clone this project
-    [2] Make sure mysql is installed in pc
-    [3] goto settings.py in auth, and change the user and password
+<!-- markdownlint-configure-file {
+  "MD013": {
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD033": false,
+  "MD041": false
+} -->
+<div align="center">
 
-```bash
-  DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'new_database',
-        'USER': 'ADD YOUR USER NAME HERE',
-        'PASSWORD': 'ADD YOUR PASSWORD HERE',
-        'HOST':'127.0.0.1',
-        'PORT':'3306',
-    }
-}
-  ```
+# File-Auth
 
-    [4] open terminal and run server by ->
+`Codepeak 2021 Open source`
+[![codepeak](https://img.shields.io/badge/Codepeak-2021-blue)](https://www.codepeak.tech/)
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/File_authentication)
+A secure-authentication system which verifies users by verifying an uploaded file.
 
-```bash
-  python manage.py runserver
-```
+</div>
 
-#### Below the screenshots are added :
+### Advantage
 
-###### Successfull Register
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/register_success.png)
+- Hard/near-impossible to bruteforce 
+- No need to remember password
+- Even if somebody see your file they can't access to the account
+- Storage space doesn't depend on file size.
+- (add more ...)
 
-###### Trying to register with the same email id which gives error
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/register_failed.png)
+### Disadvantages
 
-###### Successfull login which gives a "jwt" token valid for 60 min
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/login.png)
+- If the key-file is large it would take much time to verify.
+- If user share their file publicly it would be a risk.
+- (add more ..)
 
-###### Image Upload 
-      for every user a new folder is created in img_upload folder and stored all image of that user 
-      here is the screenshot for a success full image upload from a auhenicated user 
+## Authors
 
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/successfull_imgupload.png)
-
-###### accessing uploaded Image : 
-     only authenticated user can have access to the uploaded images,  every user have a access to all images in the data base ( image from all user  ) 
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/image_Access_success.png)
-
-###### also screen shot for unauthenticated user 
-
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/photo_access_failure.png)
-
-###### at endpoint '/api/listview' here is list view of all user's images [ this page can be access only afetr login ]
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/lisy_of_images.png)
-
-#### The delete image API : this takes two argument -> image id and image url
-![App Screenshot](https://github.com/RupakBiswas-2304/Django_assignment/blob/main/screenshots/image_delete.png)
+- [@Rupak](https://www.github.com/RupakBiswas-2304)
+- [make atleast 15 point worth contribution and add your name here]
