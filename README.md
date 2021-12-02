@@ -69,14 +69,58 @@ Contributions are always welcome!
 
 ### Getting started : 
 
-- [ step 1 ]
+- [ step 1 ] 
+
+Fork the repo, give a star also😉, git clone the repo --
 
 ```bash 
 
   git clone https://github.com/RupakBiswas-2304/File_authentication.git
 
 ```
+- [ step 2]
 
+  cd into the main directory , next create a virtual environment using this folowing command 
+  if you are using multiple version of python, use python3.7 
+
+```bash 
+  python -m venv venv
+```
+  after succsfull creation of virtual environment , activate the environment by executing the activate file in venv/scripts/
+
+- [ step 3 ]
+
+install requied python module -
+
+```bash 
+  pip install -r requirment.txt
+```
+
+- [ step 4 ]
+
+  open your mysql server , and create a new database and update the settings.py in the auth folder
+```bash
+  DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'new_database',
+        'USER': 'ADD YOUR USER NAME HERE',
+        'PASSWORD': 'ADD YOUR PASSWORD HERE',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
+    }
+  }
+```
+- [ step 5 ]
+  open terminal any start the server : 
+  (make sure your virtual environment is active)
+
+```bash 
+  python manage.py runserver
+```
+- [ step 6 ]
+  use postman to test apis
+  
 ## Authors
 
 - [@Rupak](https://www.github.com/RupakBiswas-2304)
