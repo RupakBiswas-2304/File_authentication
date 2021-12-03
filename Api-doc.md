@@ -231,6 +231,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
   | `image` | `image` | **Required** | image to be uploaded |
 
 - Example Input and Response
+
   ![upload image](./screenshots/upload.png)
 
 ### 7 List all Images
@@ -246,6 +247,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
   | `none` | `none` |  | none |
 
 - Example Input and Response
+
   ![upload image](./screenshots/listview.png)
 
 ### 8 Deleting a Image
