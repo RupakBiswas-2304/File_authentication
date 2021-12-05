@@ -41,6 +41,10 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 
 </div>
 
+<div align="left">
+  <a href="https://www.figma.com/file/GZN1Riyavg69vflQ9XKz0S/codepeak?node-id=0%3A1">Figma Design for SignIn-SignUp pages</a>
+</div>
+
 ### Advantage
 
 - Hard/near-impossible to bruteforce 
