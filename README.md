@@ -131,14 +131,16 @@ Contributions are always welcome!
   ```
 - [ step 6 ]
   use postman to test apis
+
     
 #
     
-# Getting Started with Create React App
 
-[Read here](https://github.com/pushkar2112/File_authentication/blob/patch-1/react.md)
+## Getting Started with Create React App
 
-  
+[Read here](https://github.com/RupakBiswas-2304/File_authentication/blob/main/react.md)
+
+    
 ## Authors
 
 - [@Rupak](https://www.github.com/RupakBiswas-2304)
