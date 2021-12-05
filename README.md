@@ -1,4 +1,5 @@
 
+
 <!-- markdownlint-configure-file {
   "MD013": {
     "code_blocks": false,
@@ -52,14 +53,14 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 
 - Hard/near-impossible to bruteforce 
 - No need to remember password
-- Even if somebody see your file they can't access to the account
-- Storage space doesn't depend on file size.
+- Even if somebody sees your file they can't get access to the account
+- Storage space doesn't depend on the file size.
 - (add more ...)
 
 ### Disadvantages
 
 - If the key-file is large it would take much time to verify.
-- If user share their file publicly it would be a risk.
+- If user shares their file publicly it would be a risk.
 - (add more ..)
 
 # Contributing :
@@ -87,17 +88,17 @@ Contributions are always welcome!
   ```
 - [ step 2]
 
-  cd into the main directory , next create a virtual environment using this folowing command 
+  cd into the main directory , next create a virtual environment using the folowing command 
   if you are using multiple version of python, use python3.7 
 
   ```bash 
     python -m venv venv
   ```
-  after succsfull creation of virtual environment , activate the environment by executing the activate file in venv/scripts/
+  after successfull creation of virtual environment , activate the environment by executing the activate file in venv/scripts/
 
 - [ step 3 ]
 
-  install requied python module -
+  install requied python modules -
 
   ```bash 
     pip install -r requirment.txt
@@ -119,7 +120,7 @@ Contributions are always welcome!
     }
   ```
 - [ step 5 ]
-  open terminal any start the server : 
+  open terminal and start the server : 
   (make sure your virtual environment is active)
 
   ```bash 
@@ -130,6 +131,13 @@ Contributions are always welcome!
   ```
 - [ step 6 ]
   use postman to test apis
+    
+#
+    
+# Getting Started with Create React App
+
+[Read here](https://github.com/pushkar2112/File_authentication/blob/patch-1/react.md)
+
   
 ## Authors
 
