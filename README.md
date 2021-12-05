@@ -44,7 +44,8 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 
 <div>
   <p align="left">Link of Figma design for SignIn-SignUp page</p>
-  <a href="">https://www.figma.com/file/GZN1Riyavg69vflQ9XKz0S/codepeak?node-id=41%3A43</a>
+  <a href="https://www.figma.com/file/GZN1Riyavg69vflQ9XKz0S/codepeak?node-id=41%3A43"> ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)</a> 
+  - credit [@riyajha2305](https://github.com/riyajha2305)
 </div>
 
 
@@ -134,5 +135,4 @@ Contributions are always welcome!
 ## Authors
 
 - [@Rupak](https://www.github.com/RupakBiswas-2304)
-- [@riyajha2305](https://github.com/riyajha2305)
 - [make atleast 15 points worth contribution and add your name here]
