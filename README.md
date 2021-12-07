@@ -61,7 +61,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 
 - If the key-file is large it would take much time to verify.
 - If user shares their file publicly it would be a risk.
-- (add more ..)
+- If someone's computer is infected then it may be risky to keep key files open because there are malwares which take user's position coordinates from IP, copy hardware ID, copy the key file and send it to the hacker and hacker can easily get access you account.
 
 # Contributing :
 
