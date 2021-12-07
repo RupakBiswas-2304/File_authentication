@@ -64,6 +64,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 - If user shares their file publicly it would be a risk.
 - If someone's computer is infected then it may be risky to keep key files open because there are malwares which take user's position coordinates from IP, copy hardware ID, copy the key file and send it to the hacker and hacker can easily get access user's account. In this case two factor authentication(2FA) also has no role to save user's account.
 - If key file is lost during formatting device or some other issue the account will be locked forever if 2FA is absent.
+- If it is a online system then internet problems can reduce productivity.
 
 # Contributing :
 
