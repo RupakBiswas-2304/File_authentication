@@ -55,13 +55,16 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 - No need to remember password
 - Even if somebody sees your file they can't get access to the account
 - Storage space doesn't depend on the file size.
-- (add more ...)
+- Reduces working time & increases productivity.
+- Credentials accessible anytime & anywhere with just few clicks.
 
 ### Disadvantages
 
 - If the key-file is large it would take much time to verify.
 - If user shares their file publicly it would be a risk.
-- (add more ..)
+- If someone's computer is infected then it may be risky to keep key files open because there are malwares which take user's position coordinates from IP, copy hardware ID, copy the key file and send it to the hacker and hacker can easily get access user's account. In this case two factor authentication(2FA) also has no role to save user's account.
+- If key file is lost during formatting device or some other issue the account will be locked forever if 2FA is absent.
+- If it is a online system then internet problems can reduce productivity.
 
 # Contributing :
 
