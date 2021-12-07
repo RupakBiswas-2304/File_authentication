@@ -149,4 +149,5 @@ Contributions are always welcome!
 ## Authors
 
 - [@Rupak](https://www.github.com/RupakBiswas-2304)
+- Pushkar Verma [@pushkar2112](https://www.github.com/pushkar2112)
 - [make atleast 15 points worth contribution and add your name here]
