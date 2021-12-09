@@ -5,11 +5,12 @@ from users.serializer import UserSerializer,FileSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import jwt,datetime
-from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.parsers import MultiPartParser, FormParser ,JSONParser
 from rest_framework import status
 from django.views import View
 from django.http import FileResponse
 from django.conf import settings
+import hashlib,io,json
 
 # Create your views here.
 
@@ -23,13 +24,39 @@ def is_loggedin(token):
 
 class RegisterView(APIView):
     def post(self, request):
-        serializer = UserSerializer(data = request.data)
-        serializer.is_valid(raise_exception= True)
-        serializer.save()
+        
+        email = request.POST.get('email')
+        user1 = User.objects.filter(email = email).first()
+        
+        if user1:
+            response = Response({
+                # "serializer": serializer.data,
+                "status":403,
+                "message": "user with that email exists",
+            })
+            return response
+        
+        f_name = request.POST.get('f_name')
+        l_name = request.POST.get('l_name')
+        phone = request.POST.get('phone')
+        file = request.FILES['file']
+        bytes = file.read() # read entire file as bytes
+        hash = hashlib.sha256(bytes).hexdigest();
+        try:
+            user = User.objects.create(f_name=f_name,l_name=l_name,email=email,phoneno=phone,hash=hash)
+            serializer = UserSerializer(user)
+            response = Response({
+                "serializer": serializer.data,
+                "status":201,
+                "message": "User Created Successfull",
+            })
+            return response
+        except:
+            print('something went wrong') 
         response = Response({
-            "serializer": serializer.data,
-            "status":201,
-            "message": "User Created Successfull",
+            # "serializer": serializer.data,
+            "status":400,
+            "message": "User not created",
         })
         return response
 

@@ -26,14 +26,19 @@ class Signup extends React.Component{
         })
     }
     submitform =(event) => {
-        // console.log(this.state)
-        axios({
-            method: 'post',
-            url: 'http://127.0.0.1:8000/api/login',
-            data: this.state
-          }).then(Response => {
-            console.log(Response)
-            console.log(Response.data.status)
+        // // console.log(this.state)
+        // axios({
+        //     method: 'post',
+        //     url: 'http://localhost:8000/api/login',
+        //     withCredentials: true,
+        //     data: this.state
+        //   })
+        axios.post('http://localhost:8000/api/login', this.state , {
+            //AxiosRequestConfig parameter
+            withCredentials: true //correct
+          })
+        .then(Response => {
+            this.props.logintrigger(true)
         })
         .catch(error =>{
             console.log(error)

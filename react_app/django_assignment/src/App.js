@@ -28,6 +28,10 @@ class App extends Component {
   stateofmainview = (view) => {
     this.setState({currentview: view})
   }
+
+  stateofloggedin = (value) => {
+    this.setState({logedin: value})
+  }
   
 
   render() {
@@ -37,7 +41,7 @@ class App extends Component {
         view = <Signup/>
       }
       else if((this.state.currentview) === "login" ){
-        view = <Login/>
+        view = <Login logintrigger = {this.stateofloggedin}/>
       }
     }
     else{

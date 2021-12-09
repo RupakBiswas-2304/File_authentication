@@ -3,15 +3,17 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class User(AbstractUser):
-    name = models.CharField(max_length= 255)
+    f_name = models.CharField(max_length= 255)
+    l_name = models.CharField(max_length= 255)
     email = models.EmailField(max_length=255,unique=True)
-    password = models.CharField(max_length= 255)
-    age = models.IntegerField()
     phoneno = models.CharField(max_length=14)
+    hash = models.CharField(max_length=256)
     username = None
-
+    first_name = None
+    last_name = None
+    password = None
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['name','password']
+    REQUIRED_FIELDS = ['f_name','l_name']
     
 def user_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
