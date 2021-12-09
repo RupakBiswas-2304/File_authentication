@@ -29,11 +29,11 @@ class Signup extends React.Component{
         // console.log(this.state)
         axios({
             method: 'post',
-            url: 'http://127.0.0.1:8000/api/login',
+            url: 'http://localhost:8000/api/login',
+            withCredentials: true,
             data: this.state
           }).then(Response => {
-            console.log(Response)
-            console.log(Response.data.status)
+            this.props.logintrigger(true)
         })
         .catch(error =>{
             console.log(error)
