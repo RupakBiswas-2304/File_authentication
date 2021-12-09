@@ -31,7 +31,7 @@ class RegisterView(APIView):
         if user1:
             response = Response({
                 # "serializer": serializer.data,
-                "status":200,
+                "status":403,
                 "message": "user with that email exists",
             })
             return response
@@ -55,8 +55,8 @@ class RegisterView(APIView):
             print('something went wrong') 
         response = Response({
             # "serializer": serializer.data,
-            "status":201,
-            "message": "User Created Successfull",
+            "status":400,
+            "message": "User not created",
         })
         return response
 

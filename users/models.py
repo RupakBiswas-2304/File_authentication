@@ -9,6 +9,9 @@ class User(AbstractUser):
     phoneno = models.CharField(max_length=14)
     hash = models.CharField(max_length=256)
     username = None
+    first_name = None
+    last_name = None
+    password = None
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['f_name','l_name']
     
