@@ -1,4 +1,5 @@
 
+
 <!-- markdownlint-configure-file {
   "MD013": {
     "code_blocks": false,
@@ -41,19 +42,31 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 
 </div>
 
+
+<div >
+  <div align="left">Link of Figma design for SignIn-SignUp page : 
+  <a href="https://www.figma.com/file/GZN1Riyavg69vflQ9XKz0S/codepeak?node-id=41%3A43"> @Figma </a> </div>
+  <div> Credit : <a href="https://www.github.com/riyajha2305"> @riyajha2305</a><div>
+</div>
+
 ### Advantage
 
 - Hard/near-impossible to bruteforce 
 - No need to remember password
-- Even if somebody see your file they can't access to the account
-- Storage space doesn't depend on file size.
-- (add more ...)
+- Even if somebody sees your file they can't get access to the account
+- Storage space doesn't depend on the file size.
+- Reduces working time & increases productivity.
+- Credentials accessible anytime & anywhere with just few clicks.
+- Easy to understand and use for beginners
 
 ### Disadvantages
 
 - If the key-file is large it would take much time to verify.
-- If user share their file publicly it would be a risk.
-- (add more ..)
+- If user shares their file publicly it would be a risk.
+- If someone's computer is infected then it may be risky to keep key files open because there are malwares which take user's position coordinates from IP, copy hardware ID, copy the key file and send it to the hacker and hacker can easily get access user's account. In this case two factor authentication(2FA) also has no role to save user's account.
+- If key file is lost during formatting device or some other issue the account will be locked forever if 2FA is absent.
+- If it is a online system then internet problems can reduce productivity.
+- If someone is using this service from a remote server the session can be hijacked and control of account can be taken by hacker.
 
 # Contributing :
 
@@ -80,17 +93,17 @@ Contributions are always welcome!
   ```
 - [ step 2]
 
-  cd into the main directory , next create a virtual environment using this folowing command 
+  cd into the main directory , next create a virtual environment using the folowing command 
   if you are using multiple version of python, use python3.7 
 
   ```bash 
     python -m venv venv
   ```
-  after succsfull creation of virtual environment , activate the environment by executing the activate file in venv/scripts/
+  after successfull creation of virtual environment , activate the environment by executing the activate file in venv/scripts/
 
 - [ step 3 ]
 
-  install requied python module -
+  install requied python modules -
 
   ```bash 
     pip install -r requirment.txt
@@ -112,7 +125,7 @@ Contributions are always welcome!
     }
   ```
 - [ step 5 ]
-  open terminal any start the server : 
+  open terminal and start the server : 
   (make sure your virtual environment is active)
 
   ```bash 
@@ -123,8 +136,20 @@ Contributions are always welcome!
   ```
 - [ step 6 ]
   use postman to test apis
-  
+- [ step 7 ]
+    Now read the full documentation of the API to start developing. [Link to API Documentation](https://github.com/ArchismanKarmakar/File_authentication/blob/e758f86ea4a10badda0f9e9301dff5534bb92d61/Api-doc.md)
+
+    
+#
+    
+
+## Getting Started with Create React App
+
+[Read here](https://github.com/RupakBiswas-2304/File_authentication/blob/main/react.md)
+
+    
 ## Authors
 
 - [@Rupak](https://www.github.com/RupakBiswas-2304)
+- Pushkar Verma [@pushkar2112](https://www.github.com/pushkar2112)
 - [make atleast 15 points worth contribution and add your name here]
