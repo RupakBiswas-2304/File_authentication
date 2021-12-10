@@ -49,15 +49,16 @@ A secure-authentication system which verifies users by verifying an uploaded fil
   <div> Credit : <a href="https://www.github.com/riyajha2305"> @riyajha2305</a><div>
 </div>
 
-### Advantage
+### Advantages
 
-- Hard/near-impossible to bruteforce 
-- No need to remember password
-- Even if somebody sees your file they can't get access to the account
+- Hard/near-impossible to bruteforce.
+- No need to remember password.
+- Even if somebody sees your file they can't get access to the account.
 - Storage space doesn't depend on the file size.
 - Reduces working time & increases productivity.
 - Credentials accessible anytime & anywhere with just few clicks.
-- Easy to understand and use for beginners
+- Easy to understand and use for beginners.
+- Highly accessible with easy to use UI to bridge the learning curve.
 
 ### Disadvantages
 
@@ -67,6 +68,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 - If key file is lost during formatting device or some other issue the account will be locked forever if 2FA is absent.
 - If it is a online system then internet problems can reduce productivity.
 - If someone is using this service from a remote server the session can be hijacked and control of account can be taken by hacker.
+- Cannot be used in public servers like airports/railways since it poses humongous threat on the file integrity and could lead to a breach of security.
 
 # Contributing :
 
