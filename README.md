@@ -58,7 +58,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 - Reduces working time & increases productivity.
 - Credentials accessible anytime & anywhere with just few clicks.
 - Easy to understand and use for beginners.
-- Highly accessible with easy to use UI to bridge the learning curve.
+- Highly accessible with low skill gap.
 
 ### Disadvantages
 
