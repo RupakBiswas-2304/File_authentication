@@ -63,7 +63,9 @@ class RegisterView(APIView):
 class LoginView(APIView):
     def post(self,request):
         email = request.data['email']
-        password = request.data['password']
+        file = request.FILES['file']
+        bytes = file.read() # read entire file as bytes
+        hash = hashlib.sha256(bytes).hexdigest();
 
         user = User.objects.filter(email = email).first()
 
@@ -73,9 +75,9 @@ class LoginView(APIView):
                 'status':403
             })
         
-        if not user.check_password(password):
+        if not user.hash == hash:
             return Response({
-                'message':"You have Entered Incorrect Password",
+                'message':"You have Choosen Incorrect File",
                 'status':403
             })
 
