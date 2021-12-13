@@ -40,10 +40,10 @@ class Profile extends React.Component {
             <span>Id</span> {this.state.id}
           </li>
           <li>
-            <span>Name</span> {this.state.f_name}
+            <span>First Name</span> {this.state.f_name}
           </li>
           <li>
-            <span>Age</span> {this.state.l_name}
+            <span>last Name</span> {this.state.l_name}
           </li>
           <li>
             <span>Email</span> {this.state.email}
