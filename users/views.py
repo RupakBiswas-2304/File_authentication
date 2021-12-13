@@ -111,7 +111,6 @@ class UserView(APIView):
         
         user = User.objects.filter(id = payload['id']).first()
         serializer = UserSerializer(user)
-        hello = f"Hello {user.name}"
 
         return Response({
             "message":serializer.data,
