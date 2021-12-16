@@ -1,6 +1,6 @@
 from .views import RegisterView,LoginView,UserView,LogoutView,EditProfileView,FileView,ListAllImage,DeleteImage
 from django.urls import path
-from django.conf.urls import url
+# from django.conf.urls import urlreact
 
 urlpatterns = [
     path('register', RegisterView.as_view()),

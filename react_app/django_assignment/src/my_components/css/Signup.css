@@ -86,3 +86,346 @@ input:focus {
     box-shadow: 0 0 10px #fdb49e;
     font-family: 'Quicksand', sans-serif;
 }
+
+.Rectangle1{
+position: absolute;
+width: 50%;
+height: 100%;
+left: 0px;
+top: 0px;
+
+background: #364436;
+box-shadow: 100px 0px 250px 700px #364436;
+}
+.Rectangle2 {
+position: absolute;
+width: 50%;
+height: 100%;
+left: 576px;
+top: 0px;
+/* background-image: linear-gradient(to bottom right, white, #364436); */
+}
+
+.Rectangle3 {
+    position: absolute;
+width: 555px;
+height: 80%;
+left: 123px;
+top: 87px;
+
+background: url(image.png);
+}
+
+.Rectangle4{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    left: 676px;
+    top: 87px;
+    
+    background: url('bg.png');
+    background-size: cover;
+    
+}
+.Rectangle4 h1{
+    position: absolute;
+width: 90%;
+height: 61px;
+/* left: 667px; */
+top: 118px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 40px;
+text-align: right;
+
+color: #FFFFFF;
+}
+
+.Rectangle4 h2{
+    position: absolute;
+width: 50%;
+height: 35px;
+left: 160px;
+top: 163px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+text-align: right;
+
+color: #C4C4C4;
+}
+.Rectangle5{
+    position: absolute;
+width: 30%;
+height: 34px;
+left: 15%;
+top: 200px;
+
+background: rgba(54, 68, 54, 0.67);
+border-radius: 10px;
+}
+
+.Rectangle6{
+    position: absolute;
+width: 30%;
+height: 34px;
+left: 55%;
+top: 200px;
+
+background: rgba(54, 68, 54, 0.67);
+border-radius: 10px;
+}
+.Rectangle7{
+    position: absolute;
+width: 70%;
+height: 34px;
+left: 15%;
+top: 248px;
+
+background: rgba(54, 68, 54, 0.67);
+border-radius: 10px;
+}
+
+.Rectangle8{
+    position: absolute;
+width: 30%;
+height: 34px;
+left: 15%;
+top: 300px;
+
+background: rgba(54, 68, 54, 0.67);
+border-radius: 10px;
+}
+
+.Rectangle9{
+    position: absolute;
+width: 30%;
+height: 34px;
+left: 55%;
+top: 300px;
+display: flex;
+flex-direction: row;
+background: rgba(54, 68, 54, 0.67);
+border-radius: 10px;
+justify-content: center;
+}
+
+.Rectangle10{
+    position: absolute;
+width: 25%;
+height: 34px;
+left: 60%;
+top: 368px;
+
+background: #000000;
+border-radius: 20px;
+}
+.fn{
+    /* position: absolute; */
+/* width: 60px; */
+/* height: 12px; */
+/* left: 727px; */
+/* top: 328px; */
+padding-top: 10px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+
+color: #C4C4C4;
+}
+.ln{
+    /* position: absolute; */
+/* width: 60px; */
+/* height: 12px; */
+/* left: 898px; */
+/* top: 328px; */
+padding-top: 10px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+
+color: #C4C4C4;
+}
+
+.email{
+    /* position: absolute; */
+/* width: 32px;
+height: 12px;
+left: 727px;
+top: 374px; */
+padding-top: 10px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+
+color: #C4C4C4;
+}
+.phone{
+    /* position: absolute; */
+/* width: 37px;
+height: 12px;
+left: 727px;
+top: 430px; */
+padding-top: 10px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+
+color: #C4C4C4;
+}
+
+.uf{
+    
+/* position: absolute; */
+/* width: 63px;
+height: 12px;
+left: 898px;
+top: 430px; */
+padding-top: 10px;
+display: flex;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+padding-left: 10px;
+color: #C4C4C4;
+}
+
+.upload{
+    display: flex;
+}
+.cra{
+    /* position: absolute; */
+/* width: 90px;
+height: 12px;
+left: 920px;
+top: 499px; */
+padding-top: 10px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+.upload img{
+    height: 25px;
+    width: 25px;
+    left: 985px;
+top: 429px;
+margin-left: 10px;
+margin-top: 5px;
+}
+
+.boxing{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: auto;
+}
+
+input{
+    background: transparent;
+}
+
+.Rectangle1  img{
+    width: 50px;
+    position:absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.nav1{
+    position: absolute;
+width: 99px;
+height: 39px;
+left: 117px;
+top: 32px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+
+color: #C4C4C4;
+}
+.nav2{
+    position: absolute;
+width: 57px;
+height: 25px;
+left: 234px;
+top: 35px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #C4C4C4;
+
+}
+.nav3{
+    position: absolute;
+width: 57px;
+height: 25px;
+left: 324px;
+top: 35px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #C4C4C4;
+}
+
+.Rectangle4 input{
+    background: transparent;
+    border: none;
+    width: 100%;
+height: 34px;
+left: 15%;
+top: 200px;
+color: white;
+background: rgba(54, 68, 54, 0.67);
+border-radius: 10px;
+}
+
+.Rectangle4 input:focus{
+    box-shadow: none;
+    color: white;
+}
