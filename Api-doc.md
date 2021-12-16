@@ -48,7 +48,7 @@ A secure-authentication system which verifies users by verifying an uploaded fil
   | `name` | `string` | **Required**| Your Name |
   | `email` | `string` | **Required**| Your Email |
   | `password` | `string` | **Required**| Your password |
-  | `age` | `string` | **Required**| Your Age |
+  | `file` | `filetype` | **Required**| Your File |
   | `phoneno` | `string` | **Required**| Your Phone Number |
 
 - Example Input
@@ -103,13 +103,13 @@ A secure-authentication system which verifies users by verifying an uploaded fil
   | Parameter | Type | Required | Description |
   | :--- | :--- | :--- | :--- |
   | `email` | `string` | **Required**| Your Email |
-  | `password` | `string` | **Required**| Your password |
+  | `file` | `filetype` | **Required**| Your file |
 
 - Example Input
   ```javascript
   {
     "email" : "demo@gmail.com",
-    "password" : "demo@123",
+    "file" : "demofile",
   }
   ```
 - Example Response on success
@@ -119,11 +119,11 @@ A secure-authentication system which verifies users by verifying an uploaded fil
       "status" : 200
   }
   ```
-- Example Response on Wrong Password
+- Example Response on Wrong File
   ```javascript
   {
-      "message" : "You have Entered Incorrect Password",
-      "status" : 403
+      'message':"You have Choosen Incorrect File",
+      'status':403
   }
   ```
 - Example Response on Wrong Email
