@@ -54,22 +54,22 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 - Example Input
   ```javascript
   {
-    "name" : "demo",
+    "fname" : "demo",
+    "lname" : "demo"
     "email" : "demo@gmail.com",
-    "password" : "demo@123",
-    "age" : 19,
     "phoneno" : 9999999999
+    "file" : "demofile"
   }
   ```
 - Example Response on success
   ```javascript
   {
       "serializer" : {
-        "name" : "demo",
+        "fname" : "demo",
+        "lname: : "demo",
         "email" : "demo@gmail.com",
-        "password" : "demo@123",
-        "age" : 19,
         "phoneno" : 9999999999
+        "file" : "demofile"
       }
       "status" : 201,
       "message" : "User Created Successfull"
@@ -79,9 +79,16 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 - Example Response on using registered email
   ```javascript
   {
-      "email" : [
-          "user with this email already exists"
-        ]
+      "status" : 403,
+      "message" : "user with that email exists",
+  }
+  ```
+
+- Example Response on something going wrong
+  ```javascript
+  {   
+      "status":400,
+      "message": "User not created",
   }
   ```
 
