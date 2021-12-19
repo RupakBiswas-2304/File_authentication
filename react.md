@@ -9,6 +9,8 @@ In the project directory, you can run:
 ### `npm start`
 
 ```bash
+cd react_app
+cd django_assignment
 npm start
 ```
 
