@@ -2,51 +2,29 @@
 
 
 
-.nav{
-    width: clac(100%-10px);
-    height: 70px;
-    margin: 9px;
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.247);
-    border: 3px solid rgba(255, 255, 255, 0.247);
-    border-radius: 10px;
-    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
-    transform: translateY(5px);
-}
-.nav .logo{
-    width: 40%;
-    padding-left: 50px;
-}
-.nav .logo h2{
-    font-family: 'Encode Sans SC', sans-serif;
-    color: rgba(255, 255, 255, 0.795);
-}
-.nav .items{
-    width: 60%;
-}
-.nav .items ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.nav .items ul li{
-    list-style: none;
-    color: rgba(255, 255, 255, 0.596);
-    font-size: 1.5em;
-    font-family: 'Encode Sans SC', sans-serif;
-}
-.nav .items ul li:hover{
+
+.Rectangle1{
+    /* position: absolute; */
+    width: 50%;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    }
+
     
-    color: rgb(255, 255, 255);
+.Rectangle2{
+    display:  flex;
+    justify-content: flex-start;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    
 }
 
-/* The switch - the box around the slider */
-button{
-  background-color: rgba(255, 255, 255, 0);
-  color: rgba(255, 255, 255, 0.705);
-  border: none;
+.Rectangle2 img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:20px;
+    left:50px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/Navbar.css";
+import main from './css/images/main.png'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -42,16 +43,15 @@ class Navbar extends React.Component {
     if (!this.props.loginstatus) {
       content = (
         <>
-          <li>
-            <button onClick={this.handlemainview} value="signup">
-              SIGN UP
-            </button>
-          </li>
-          <li>
-            <button onClick={this.handlemainview} value="login">
-              LOG IN
-            </button>
-          </li>
+                <div className="Rectangle1">
+                    <img src={main} alt='main' />
+                    <a>
+                        <div className="nav1">FileAuth</div>
+                    </a>
+                    <div className="nav2">About</div>
+                    <div className="nav3">Contact</div>
+                </div>
+
         </>
       );
     } else {
@@ -78,19 +78,17 @@ class Navbar extends React.Component {
 
     return (
       <div className="nav">
-        <div className="logo">
-          <h2>Django Assignment</h2>
-        </div>
-        <div className="items">
-          <ul>
-            {content}
-            <li>
-              <button onClick={this.handleclick} value={this.state.buttonon}>
-                Theme
-              </button>
-            </li>
-          </ul>
-        </div>
+
+            
+      <div className="Rectangle2">
+                    <img src={main} alt='main' />
+                    <div className="nav1">FileAuth</div>
+                    
+                    <div className="nav2">About</div>
+                    <div className="nav3">Contact</div>
+                </div>
+
+        
       </div>
     );
   }

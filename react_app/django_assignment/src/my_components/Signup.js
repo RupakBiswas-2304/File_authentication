@@ -46,6 +46,10 @@ class Signup extends React.Component{
             password: event.target.value
         })
     }
+    handlemainview = (event) => {
+        let k = event.target.value;
+        this.props.stateofmainview(k);
+      };
     submitform =(event) => {
         let v = this.isNumeric(this.state.phoneno)
 
@@ -113,47 +117,36 @@ class Signup extends React.Component{
             <>
             
             <div className="Rectangle">
-             <div className="Rectangle1">
-             <img src={main} alt='main' />
-             <a href= "/login"><div className="nav1">FileAuth</div></a>
-             <div className="nav2">About</div>
-             <div className="nav3">Contact</div>
-             </div>
-             <div className="Rectangle2">
 
-             </div>
-             <div className="Rectangle3">
 
-             </div>
-             <div className="Rectangle4">
-                 <div className="texts">
-                 <h1>Create new Account</h1>
-                 <h2>Already a member? LogIn</h2>
-                 <div className="Rectangle5">
-                 <input type="text" className="fn" placeholder="First Name" required />
-                 </div>
-                 <div className="Rectangle6">
-                 <input type="text" className="ln" placeholder="Last Name" required />
-                 </div>
-                 <div className="Rectangle7">
-                 <input type="text" className="email" placeholder="Email" required />
-                 </div>
-                 <div className="Rectangle8">
-                 <input type="text" className="phone" placeholder="Phone" required />
-                 </div>
-                 <div className="Rectangle9">
-                    <div className="uf">Upload File</div>
-                    <div className="upload"><img src={upload} alt='upld' /></div>
-                 </div>
-                 <div className="Rectangle10">
-                    <div className="cra">Create Account</div>
-                 </div>
-                 </div>
-             </div>
-             <div className="Rectangle11">
-             <img className="boxing" src={boxsvg} alt='box' />
-             </div>
-             </div>
+                <div className="Rectangle4">
+                    <div className="texts">
+                        <h1>Create new Account</h1>
+                        <button onClick={this.handlemainview} value="login">
+                            Login
+                        </button>
+                        <div className="Rectangle5">
+                            <input type="text" className="fn" placeholder="First Name" required />
+                        </div>
+                        <div className="Rectangle6">
+                            <input type="text" className="ln" placeholder="Last Name" required />
+                        </div>
+                        <div className="Rectangle7">
+                            <input type="text" className="email" placeholder="Email" required />
+                        </div>
+                        <div className="Rectangle8">
+                            <input type="text" className="phone" placeholder="Phone" required />
+                        </div>
+                        <div className="Rectangle9">
+                            <div className="uf">Upload File</div>
+                            <div className="upload"><img src={upload} alt='upld' /></div>
+                        </div>
+                        <div className="Rectangle10">
+                            <div className="cra">Create Account</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
              </>
         )
     }
