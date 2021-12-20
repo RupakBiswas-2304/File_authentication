@@ -3,7 +3,7 @@ import "./css/Login.css";
 import axios from "axios";
 // import { API_URL } from '../constants'
 
-class Signup extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -96,4 +96,4 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+export default Login;

@@ -113,7 +113,7 @@ height: 80%;
 left: 123px;
 top: 87px;
 
-background: url(image.png);
+background: url(./images/image.png);
 }
 
 .Rectangle4{
@@ -123,7 +123,7 @@ background: url(image.png);
     left: 676px;
     top: 87px;
     
-    background: url('bg.png');
+    background: url(./images/bg.png);
     background-size: cover;
     
 }

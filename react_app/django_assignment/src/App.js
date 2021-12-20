@@ -5,13 +5,18 @@ import Signup from "./my_components/Signup";
 import Login from "./my_components/Login";
 import Profile from "./my_components/Profile";
 import Fileupload from "./my_components/Fileupload";
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from "react-router-dom";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: "light",
+      theme: "home",
       logedin: false,
-      currentview: "home",
+      currentview: "signup",
       id: 0,
       name: "",
       email: "",
@@ -61,6 +66,14 @@ class App extends Component {
         />
 
         {view}
+
+        <BrowserRouter>
+      <Switch>
+        <Route exact path="/login" element={<Login />}>
+          <Login/>
+        </Route>
+      </Switch>
+    </BrowserRouter>
         {/* <Profile/> */}
       </div>
     );

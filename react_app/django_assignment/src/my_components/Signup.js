@@ -1,8 +1,8 @@
 import React from 'react'
-import upload from './css/upload.png'
-import  boxsvg from './css/box.svg';
+import upload from './css/images/upload.png'
+import  boxsvg from './css/images/box.svg';
 import './css/Signup.css'
-import main from './css/main.png'
+import main from './css/images/main.png'
 // import axios from "axios";
 // import { API_URL } from '../constants'
 
@@ -115,7 +115,7 @@ class Signup extends React.Component{
             <div className="Rectangle">
              <div className="Rectangle1">
              <img src={main} alt='main' />
-             <div className="nav1">FileAuth</div>
+             <a href= "/login"><div className="nav1">FileAuth</div></a>
              <div className="nav2">About</div>
              <div className="nav3">Contact</div>
              </div>
