@@ -122,9 +122,8 @@ class Signup extends React.Component{
                 <div className="Rectangle4">
                     <div className="texts">
                         <h1>Create new Account</h1>
-                        <button onClick={this.handlemainview} value="login">
-                            Login
-                        </button>
+                        <p className='logbtn'> Already a member? <button className="logbutton" onClick={this.handlemainview} value="login" >Login </button></p>
+                            
                         <div className="Rectangle5">
                             <input type="text" className="fn" placeholder="First Name" required />
                         </div>
@@ -138,7 +137,13 @@ class Signup extends React.Component{
                             <input type="text" className="phone" placeholder="Phone" required />
                         </div>
                         <div className="Rectangle9">
-                            <div className="uf">Upload File</div>
+                        <input
+                    type="file"
+                    name=""
+                    id="3"
+                    required="required"
+                    onChange={this.ChangeFile}
+                  />        <div className="uf">Upload File</div>
                             <div className="upload"><img src={upload} alt='upld' /></div>
                         </div>
                         <div className="Rectangle10">

@@ -44,7 +44,7 @@ class App extends Component {
         stateofmainview={this.stateofmainview}
         />;
       } else if (this.state.currentview === "login") {
-        view = <Login logintrigger={this.stateofloggedin} />;
+        view = <Login logintrigger={this.stateofloggedin} stateofmainview={this.stateofmainview} />;
       }
     } else {
       if (this.state.currentview === "home") {

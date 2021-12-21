@@ -1,4 +1,5 @@
 import React from "react";
+import './css/Signup.css'
 import "./css/Login.css";
 import axios from "axios";
 // import { API_URL } from '../constants'
@@ -17,6 +18,11 @@ class Login extends React.Component {
       email: event.target.value,
     });
   };
+   handlemainview = (event) => {
+    let k = event.target.value;
+    this.props.stateofmainview(k);
+  };
+
 
   ChangeFile = (event) => {
     this.setState({
@@ -51,8 +57,12 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="signupform">
+      <div className="signupform Rectangle4">
+        <div className="box">
         <div className="head">Log In</div>
+        <p className='regbtn'> New member? <button className="logbutton" onClick={this.handlemainview} value="signup" >Register </button></p>
+        </div>
+
         <div className="form">
           <form onSubmit={this.submitform}>
             <div className="mform">
@@ -87,8 +97,9 @@ class Login extends React.Component {
                 </li>
               </ul>
             </div>
-
-            <button type="submit">Submit</button>
+            
+                            <div className="cra"><button className="lgn" type="submit">Login</button></div>
+                        
           </form>
         </div>
       </div>
