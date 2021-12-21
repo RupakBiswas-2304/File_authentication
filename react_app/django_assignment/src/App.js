@@ -5,13 +5,17 @@ import Signup from "./my_components/Signup";
 import Login from "./my_components/Login";
 import Profile from "./my_components/Profile";
 import Fileupload from "./my_components/Fileupload";
+// import {
+//   BrowserRouter,
+//   Route
+// } from "react-router-dom";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: "light",
+      theme: "home",
       logedin: false,
-      currentview: "home",
+      currentview: "signup",
       id: 0,
       name: "",
       email: "",
@@ -36,9 +40,11 @@ class App extends Component {
     let view;
     if (!this.state.logedin) {
       if (this.state.currentview === "signup") {
-        view = <Signup />;
+        view = <Signup 
+        stateofmainview={this.stateofmainview}
+        />;
       } else if (this.state.currentview === "login") {
-        view = <Login logintrigger={this.stateofloggedin} />;
+        view = <Login logintrigger={this.stateofloggedin} stateofmainview={this.stateofmainview} />;
       }
     } else {
       if (this.state.currentview === "home") {
@@ -53,7 +59,7 @@ class App extends Component {
 
     return (
       <div className={`App ${this.state.theme}`}>
-        <Navbar
+        <Navbar className="nav"
           stateofparent={this.stateofparent}
           stateofmainview={this.stateofmainview}
           loginstatus={this.state.logedin}
@@ -61,10 +67,19 @@ class App extends Component {
         />
 
         {view}
-        {/* <Profile/> */}
+
       </div>
     );
   }
 }
 
 export default App;
+
+    {/* <BrowserRouter>
+  <Switch>
+    <Route exact path="/login" element={<Login />}>
+      <Login/>
+    </Route>
+  </Switch>
+</BrowserRouter> */}
+    {/* <Profile/> */}

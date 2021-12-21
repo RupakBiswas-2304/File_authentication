@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,85 +8,56 @@
     <title>Document</title>
     <link rel="stylesheet" href="test.css">
 </head>
+
 <body>
-    <div class="nav">
-        <div class="logo">
-            <h2>
-                Django Assignment
-            </h2>
+    <div className="Rectangle">
+        <div className="Rectangle1">
+            <img src={main} alt='main' />
+            <a href="/login">
+                <div className="nav1">FileAuth</div>
+            </a>
+            <div className="nav2">About</div>
+            <div className="nav3">Contact</div>
         </div>
-        <div class="items">
-            <ul>
-                <li>Sign Up</li>
-                <li>Login</li>
-            </ul>
+        <div className="Rectangle2">
+
         </div>
-    </div>
+        <div className="Rectangle3">
 
-    <!-- <div class="signupform">
-        <div class="head">
-            Log In
         </div>
-        <div class="form">
-            <form action="POST">
-                <div class="mform">
-                    <ul id="formlist1">
-
-                        <li><span>Email</span></li>
-                        <li><span>Password</span></li>
-                    </ul>
-                    <ul id="formlist2">
-
-                        <li>                       
-                            <input type="email" name="" id="2" required='required'>
-                        </li>
-
-                        <li>
-                            <input type="password" name="" id="3" required='required'>
-                        </li>
-                    </ul>
-
+        <div className="Rectangle4">
+            <div className="texts">
+                <h1>Create new Account</h1>
+                <button onClick={this.handlemainview} value="login">
+                    Login
+                </button>
+                <div className="Rectangle5">
+                    <input type="text" className="fn" placeholder="First Name" required />
                 </div>
-               
-                <button type="submit">Submit</button>
-            </form>
+                <div className="Rectangle6">
+                    <input type="text" className="ln" placeholder="Last Name" required />
+                </div>
+                <div className="Rectangle7">
+                    <input type="text" className="email" placeholder="Email" required />
+                </div>
+                <div className="Rectangle8">
+                    <input type="text" className="phone" placeholder="Phone" required />
+                </div>
+                <div className="Rectangle9">
+                    <div className="uf">Upload File</div>
+                    <div className="upload"><img src={upload} alt='upld' /></div>
+                </div>
+                <div className="Rectangle10">
+                    <div className="cra">Create Account</div>
+                </div>
+            </div>
         </div>
-    </div> -->
-
-    <div class="profile">
-        <ul>
-            <li>
-                <span>Id</span> 5
-            </li>
-            <li>
-                <span>Name</span> Dark
-            </li>
-            <li>
-                <span>Email</span> Dark@dark.com
-            </li>
-            <li>
-                <span>Age</span> 18
-            </li>
-            <li>
-                <span>Phone no </span> 977
-            </li>
-        </ul>
-    </div>
-
-    <div class="fileupload">
-
-        <h2>Upload File</h2>
-
-        <form>
-            <lable><input type="hidden" name=""></lable>
-            <label id="zzxfc"><span>+</span> <input type="file" src="" alt="" id="filefield"></label>
-            <label> Title    <input type="text" name="" ></label>
-
-            <button type="submit">Upload</button>
-            
-        </form>
+        <div className="Rectangle11">
+            <img className="boxing" src={boxsvg} alt='box' />
+        </div>
     </div>
 
     <script src="test.js"></script>
 </body>
+
 </html>

@@ -34,7 +34,14 @@
     rgba(0,255,0,0) 70.71%) beige;
 }
 
+.home{
+  background: url(./my_components/css/images/background.png);
+  background-size: cover;
+}
 
-
+.nav{
+  height:50px;
+  z-index: 0;
+}
 
 
