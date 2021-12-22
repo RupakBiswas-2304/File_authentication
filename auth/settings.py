@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'auth.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fileauth',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'YOUR DATABASE NAME',
+        'USER': 'ADD YOUR USER NAME HERE',
+        'PASSWORD': 'ADD YOUR PASSWORD HERE',
         'HOST':'127.0.0.1',
         'PORT':'3306',
     }

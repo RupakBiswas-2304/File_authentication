@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/Navbar.css";
-import main from './css/images/main.png'
+import main from "./css/images/main.png";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -25,7 +25,6 @@ class Navbar extends React.Component {
     }
     console.log(this.props.loginstatus);
     console.log(typeof this.props.loginstatus);
-    // event.preventDefault
   };
 
   handlemainview = (event) => {
@@ -43,15 +42,14 @@ class Navbar extends React.Component {
     if (!this.props.loginstatus) {
       content = (
         <>
-                <div className="Rectangle1">
-                    <img src={main} alt='main' />
-                    <a>
-                        <div className="nav1">FileAuth</div>
-                    </a>
-                    <div className="nav2">About</div>
-                    <div className="nav3">Contact</div>
-                </div>
-
+          <div className="Rectangle1">
+            <img src={main} alt="main" />
+            <a>
+              <div className="nav1">FileAuth</div>
+            </a>
+            <div className="nav2">About</div>
+            <div className="nav3">Contact</div>
+          </div>
         </>
       );
     } else {
@@ -78,17 +76,13 @@ class Navbar extends React.Component {
 
     return (
       <div className="nav">
+        <div className="Rectangle2">
+          <img src={main} alt="main" />
+          <div className="nav1">FileAuth</div>
 
-            
-      <div className="Rectangle2">
-                    <img src={main} alt='main' />
-                    <div className="nav1">FileAuth</div>
-                    
-                    <div className="nav2">About</div>
-                    <div className="nav3">Contact</div>
-                </div>
-
-        
+          <div className="nav2">About</div>
+          <div className="nav3">Contact</div>
+        </div>
       </div>
     );
   }

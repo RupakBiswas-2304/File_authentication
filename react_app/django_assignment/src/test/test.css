@@ -19,7 +19,6 @@ body{
 
 
 .nav{
-    /* position: fixed; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -28,7 +27,6 @@ body{
     border: 3px solid rgba(255, 255, 255, 0.247);
     border-radius: 10px;
     box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
-
 }
 .nav .logo{
     width: 40%;
@@ -58,7 +56,6 @@ body{
 }
 
 /* Sign up form  */
-
 .signupform{
     width: 50%;
     height: 50vh;
@@ -73,7 +70,6 @@ body{
     justify-content: center;
 }
 .signupform .head{
-    /* height: 80%; */
     margin-top: 10px;
     margin-bottom: 2px;
     font-family: 'Encode Sans SC', sans-serif;
@@ -103,12 +99,10 @@ body{
     margin-bottom: 10px;
     padding: 3px;
 }
-
 .signupform .form form ul li{
     list-style: none;
     margin: 3px;
 }
-
 .signupform .form form .mform{
     display: flex;
 
@@ -139,8 +133,8 @@ input:focus {
     box-shadow: 0 0 10px #fdb49e;
     font-family: 'Quicksand', sans-serif;
 }
-/* ID card */
 
+/* ID card */
 .profile{
     position: absolute;
     top: 85px;
@@ -176,7 +170,6 @@ input:focus {
 }
 
 /* **********FILE UPLOAD*************** */
-
 .fileupload{
     background-color: rgba(255, 255, 255, 0.267);
     position: absolute;
@@ -193,13 +186,10 @@ input:focus {
     color: rgba(255, 255, 255, 0.808);
     font-family: 'Encode Sans SC', sans-serif;
 }
-
-
 .fileupload form label{
     margin: 0;
     padding: 0;
 }
-
 .fileupload form button{
     background-color: rgba(255, 255, 255, 0.164);
     border-radius: 2px;
@@ -215,11 +205,8 @@ input:focus {
 .fileupload form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    
+    justify-content: center;    
 }
-
 .fileupload form button{
     background-color: rgba(255, 255, 255, 0.068);
     color: rgba(255, 255, 255, 0.808);
@@ -229,7 +216,6 @@ input:focus {
 #zzxfc input {
     visibility: hidden;
 }
-
 #zzxfc{
     border: 5px solid white;
     width: 70px;
