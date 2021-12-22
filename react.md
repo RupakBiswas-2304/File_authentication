@@ -5,12 +5,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `npm start`
-
 ```bash
 cd react_app
 cd django_assignment
+```
+
+### `npm i`
+To install all dependencies 
+
+```bash
+npm i
+```
+
+### `npm start`
+```bash
 npm start
 ```
 
