@@ -139,7 +139,7 @@ Contributions are always welcome!
 - [ step 6 ]
   use postman to test apis
 - [ step 7 ]
-    Now read the full documentation of the API to start developing. [Link to API Documentation](https://github.com/ArchismanKarmakar/File_authentication/blob/e758f86ea4a10badda0f9e9301dff5534bb92d61/Api-doc.md)
+    Now read the full documentation of the API to start developing. [Link to API Documentation](https://github.com/RupakBiswas-2304/File_authentication/blob/main/Api-doc.md)
 
     
 #
