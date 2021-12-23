@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+body{
+    height: 100vh;
+    background:
+      radial-gradient(circle at 50% 0,
+        rgba(255,0,0,.5),
+        rgba(255,0,0,0) 70.71%),
+      radial-gradient(circle at 6.7% 75%,
+        rgba(0,0,255,.5),
+        rgba(0,0,255,0) 70.71%),
+      radial-gradient(circle at 93.3% 75%,
+        rgba(0,255,0,.5),
+        rgba(0,255,0,0) 70.71%) beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav{
+    /* position: fixed; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    border-radius: 10px;
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+
+}
+.nav .logo{
+    width: 40%;
+    padding-left: 50px;
+}
+.nav .logo h2{
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.795);
+}
+.nav .items{
+    width: 60%;
+}
+.nav .items ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav .items ul li{
+    list-style: none;
+    color: rgba(255, 255, 255, 0.596);
+    font-size: 1.5em;
+    font-family: 'Encode Sans SC', sans-serif;
+}
+.nav .items ul li:hover{
+    
+    color: rgb(255, 255, 255);
+}
+
+/* Sign up form  */
+
+.signupform{
+    width: 50%;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 3px solid rgba(255, 255, 255, 0.151);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signupform .head{
+    /* height: 80%; */
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 2em;
+}
+.signupform .form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.signupform .form form ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.signupform .form form button{
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.3em;
+    background-color: rgba(245, 245, 245, 0.233);
+    border: 2px solid rgba(255, 255, 255, 0.281);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 3px;
+}
+
+.signupform .form form ul li{
+    list-style: none;
+    margin: 3px;
+}
+
+.signupform .form form .mform{
+    display: flex;
+
+}
+#formlist1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;  
+    margin: 0;
+    padding: 1px; 
+}
+#formlist1 li{
+    font-family: 'Encode Sans SC', sans-serif;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1em;
+}
+input{
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.253);
+    border: 0;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+input:focus { 
+    outline: none !important;
+    border-color: #e77979;
+    color: rgba(0, 0, 0, 0.527);
+    box-shadow: 0 0 10px #fdb49e;
+    font-family: 'Quicksand', sans-serif;
+}
+/* ID card */
+
+.profile{
+    position: absolute;
+    top: 85px;
+    left: -5px;
+    background-color: rgba(255, 255, 255, 0.247);
+    width: calc(55%);
+    height: 30vh;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+}
+.profile ul{
+    position: absolute;
+    top: 8;
+    left: 25%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.profile ul li {
+    list-style: none;
+    padding: 4px;
+    margin: 0;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.884);
+    font-family: 'Encode Sans SC', sans-serif;
+}
+.profile ul li span{
+    font-size: .8em;
+    color: rgba(255, 255, 255, 0.534);
+}
+
+/* **********FILE UPLOAD*************** */
+
+.fileupload{
+    background-color: rgba(255, 255, 255, 0.267);
+    position: absolute;
+    top: 85px;
+    right: -5px;
+    background-color: rgba(255, 255, 255, 0.247);
+    width: calc(35%);
+    height: 30vh;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+    color: rgba(255, 255, 255, 0.808);
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+
+.fileupload form label{
+    margin: 0;
+    padding: 0;
+}
+
+.fileupload form button{
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 2px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+}
+#filefield label{
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 2px;
+    border: 3px solid rgba(255, 255, 255, 0.247);
+    box-shadow:  inset 5px 5px 5px rgba(255, 255, 255, 0.164) ,5px 5px 5px rgba(0, 0, 0, 0.055);
+}
+.fileupload form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+
+.fileupload form button{
+    background-color: rgba(255, 255, 255, 0.068);
+    color: rgba(255, 255, 255, 0.808);
+    font-family: 'Encode Sans SC', sans-serif;
+    margin: 5px;
+}
+#zzxfc input {
+    visibility: hidden;
+}
+
+#zzxfc{
+    border: 5px solid white;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+
+}
+#zzxfc span{
+    position: absolute;
+    top:70px;
+    left: 30px;
+    font-size: 5em;
+    color: #fff;
+}

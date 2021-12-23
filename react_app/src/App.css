@@ -1,0 +1,24 @@
+.fullPage {
+    height: 100%;
+    background-image: url("./css/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form {
+    margin-top: 200px;
+    margin-left: 800px;
+    width: 450px;
+}
+.input {
+    color: white;
+}
+h3 {
+    color: white;
+}
+.container {
+    text-align: center;
+}
+img {
+    width: 50px;
+    margin-right: 10px;
+}

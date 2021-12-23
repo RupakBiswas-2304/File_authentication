@@ -108,7 +108,13 @@ class UserView(APIView):
             payload = jwt.decode(token, 'secret', algorithms=['HS256'])
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Unauthenticated")
-        
+        # now = datetime.datetime.utcnow()
+        # current_time = now.year*10000000000 + now.month * 100000000 +now.day * 1000000 +now.hour*10000 +now.minute*100 +now.second
+        # if(payload['exp'] < current_time ):
+        #     return Response({
+        #         "message":"token expired",
+        #         "status":403
+        #     })
         user = User.objects.filter(id = payload['id']).first()
         serializer = UserSerializer(user)
 
