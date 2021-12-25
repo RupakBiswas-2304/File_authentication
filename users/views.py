@@ -137,14 +137,14 @@ class EditProfileView(APIView):
         user = User.objects.filter(id = payload['id']).first()
 
         try:
-            name_ = request.data['name']
+            f_name = request.data['f_name']
         except:
-            name_ = user.name
+            f_name = user.f_name
         
         try:
-            age_ = request.data['age']
+            l_name = request.data['l_name']
         except:
-            age_ = user.age
+            l_name = user.l_name
 
         try: 
             phoneno_ = request.data['phoneno']
@@ -153,13 +153,14 @@ class EditProfileView(APIView):
 
         
 
-        user.name = name_ 
-        user.age = age_
+        user.f_name = f_name
+        user.l_name = l_name
         user.phoneno = phoneno_
         user.save()
-
+        
+        serializer = UserSerializer(user)
         response = Response({
-            "message": "Your Profile Updated Successfully",
+            "message": serializer.data,
             "status":200
         })
         return response
