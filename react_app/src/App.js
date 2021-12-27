@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./my_components/navbar";
-import Contact from "./my_components/contact";
+import Home from "./my_components/home.jsx";
 import Register from "./my_components/register";
 import Login from "./my_components/login";
 import About from "./my_components/about";
@@ -25,7 +25,8 @@ class App extends Component {
                     <Route path="/logout" element={<Logout />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/" element={<About />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/" element={<Home />} />
                 </Routes>
             </div>
         );

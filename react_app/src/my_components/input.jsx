@@ -13,7 +13,7 @@ class Input extends React.Component {
                     placeholder={label}
                     style={{ background: "transparent" }}
                 />
-                {/* {error && <div className="alert alert-danger">{error}</div>} */}
+                {error && <div className="alert alert-danger">{error}</div>}
             </div>
         );
     }

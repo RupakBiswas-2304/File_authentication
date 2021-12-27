@@ -4,12 +4,20 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.form {
+.form,
+.profile {
     margin-top: 200px;
     margin-left: 800px;
     width: 450px;
 }
-.input {
+.fa {
+    cursor: pointer;
+}
+.profile {
+    color: white;
+}
+input {
+    background-color: transparent;
     color: white;
 }
 h3 {
