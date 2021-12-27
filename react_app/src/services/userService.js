@@ -21,7 +21,6 @@ export async function getUser() {
         const user = await http.get(apiUrl + "/user", {
             withCredentials: true,
         });
-        console.log("in getuser", user);
         if (user.data.status === 403) return null;
         return user;
     } catch (ex) {
@@ -31,11 +30,26 @@ export async function getUser() {
 export async function logout() {
     const resp = await http.post(apiUrl + "/logout", { withCredentials: true });
     const data = await getUser();
+    console.log("after logout", data);
     return true;
+}
+export async function updateUser(user) {
+    var data = new FormData();
+    data.append("f_name", user.f_name);
+    data.append("l_name", user.l_name);
+    data.append("phoneno", user.phoneno);
+    try {
+        const resp = await http.post(apiUrl + "/profile", data, {
+            withCredentials: true,
+        });
+    } catch (ex) {
+        console.log("ERROR WHILE UPDATING USER");
+    }
 }
 export default {
     register,
     login,
     getUser,
     logout,
+    updateUser,
 };

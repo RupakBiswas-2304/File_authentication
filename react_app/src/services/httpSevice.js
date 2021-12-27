@@ -9,7 +9,7 @@ axios.interceptors.response.use(null, (error) => {
     else console.log("expected error");
     return Promise.reject(error);
 });
-
+axios.defaults.withCredentials = true;
 export default {
     post: axios.post,
     get: axios.get,

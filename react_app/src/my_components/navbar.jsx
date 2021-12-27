@@ -4,7 +4,6 @@ import main from "../css/images/main.png";
 import "../App.css";
 class Navbar extends Component {
     render() {
-        console.log("in navbar", this.props.user);
         return (
             <nav className="navbar navbar-expand-lg navbar-light mb-4">
                 <div className="container-fluid">
@@ -29,7 +28,7 @@ class Navbar extends Component {
                                 <Link
                                     className="nav-link active"
                                     aria-current="page"
-                                    to="/"
+                                    to="/about"
                                 >
                                     About
                                 </Link>
