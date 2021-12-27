@@ -45,11 +45,11 @@ A secure-authentication system which verifies users by verifying an uploaded fil
 
   | Parameter | Type | Required | Description |
   | :--- | :--- | :--- | :--- |
-  | `name` | `string` | **Required**| Your Name |
   | `email` | `string` | **Required**| Your Email |
-  | `password` | `string` | **Required**| Your password |
+  | `f_name` | `string` | **Required**| Your first_name |
+  | `l_name` | `string` | **Required**| Your last name |
   | `file` | `filetype` | **Required**| Your File |
-  | `phoneno` | `string` | **Required**| Your Phone Number |
+  | `phone` | `string` | **Required**| Your Phone Number |
 
 - Example Input
   ```javascript
