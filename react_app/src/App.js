@@ -17,7 +17,7 @@ class App extends Component {
         this.setState({ user: await User.getUser() });
     }
     render() {
-        const { user } = this.props;
+        const { user } = this.state;
         return (
             <div className="fullPage">
                 <Navbar user={user} />

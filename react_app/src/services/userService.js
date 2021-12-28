@@ -22,7 +22,7 @@ export async function getUser() {
             withCredentials: true,
         });
         if (user.data.status === 403) return null;
-        return user;
+        return user.data.message;
     } catch (ex) {
         return null;
     }
