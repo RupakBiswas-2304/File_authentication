@@ -3,6 +3,7 @@ import Form from "./form";
 import Joi from "joi-browser";
 import User from "../services/userService";
 import "../App.css";
+import { toast } from "react-toastify";
 class Register extends Form {
     state = {
         data: {
@@ -23,12 +24,15 @@ class Register extends Form {
     };
     onSubmit = async () => {
         try {
-            const data = await User.register(this.state.data);
+            const { data } = await User.register(this.state.data);
+            if (data.status >= 400) {
+                this.setState({ error: data.message });
+                toast.error(this.state.error);
+                return;
+            }
+            this.setState({ error: {} });
             window.location = "/login";
-        } catch (ex) {
-            console.log(ex);
-            alert(ex.response.error);
-        }
+        } catch (ex) {}
     };
     render() {
         return (

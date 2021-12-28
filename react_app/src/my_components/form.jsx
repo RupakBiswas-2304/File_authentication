@@ -2,6 +2,7 @@ import Joi from "joi-browser";
 import React, { Component } from "react";
 import Input from "./input";
 import "../App.css";
+import { toast } from "react-toastify";
 class Form extends React.Component {
     validate() {
         const res = Joi.validate(this.state.data, this.schema, {
@@ -58,10 +59,11 @@ class Form extends React.Component {
             />
         );
     }
-    renderButton(label, path) {
+    renderButton(label) {
         return (
             <button
                 className="btn btn-success"
+                disabled={this.validate()}
                 style={{ width: "425px", marginLeft: "13px" }}
             >
                 {label}
