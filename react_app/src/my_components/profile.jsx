@@ -19,7 +19,6 @@ class Profile extends Component {
         const res = Joi.validate(this.state.data, this.schema, {
             abortEarly: false,
         });
-        // console.log(res.error);
         if (res.error) return res.error.details[0].message;
         return null;
     }
@@ -33,7 +32,6 @@ class Profile extends Component {
     async componentDidMount() {
         const resp = await User.getUser();
         this.setState({ user: resp.data.message });
-        console.log("alifh ", resp);
     }
     handleEdit = () => {
         let clone = this.state.edit;
