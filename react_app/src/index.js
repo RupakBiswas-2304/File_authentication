@@ -8,10 +8,8 @@ import "./index.css";
 import App from "./App";
 
 ReactDOM.render(
-    <CookiesProvider>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </CookiesProvider>,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
     document.getElementById("root")
 );

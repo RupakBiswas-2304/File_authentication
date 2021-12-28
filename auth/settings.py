@@ -84,8 +84,8 @@ DATABASES = {
         'NAME': 'fileauth',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST':'127.0.0.1',
-        'PORT':'3306',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -128,11 +128,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/img_uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR,"img_uploads")
+MEDIA_ROOT = os.path.join(BASE_DIR, "img_uploads")
 
 AUTH_USER_MODEL = 'users.User'
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
-APPEND_SLASH=False
+APPEND_SLASH = False
