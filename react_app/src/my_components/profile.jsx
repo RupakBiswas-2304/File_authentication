@@ -30,8 +30,13 @@ class Profile extends Component {
         return null;
     }
     async componentDidMount() {
-        const resp = await User.getUser();
-        this.setState({ user: resp.data.message });
+        try {
+            const user = await User.getUser();
+            this.setState({ user });
+        } catch (ex) {
+            console.log("oeugphre");
+            this.setState({ user: {} });
+        }
     }
     handleEdit = () => {
         let clone = this.state.edit;

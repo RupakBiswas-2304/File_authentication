@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
+import { toast } from "react-toastify";
 import userService from "../services/userService";
 export default function Logout(props) {
     async function handleCookie() {
-        await userService.logout();
-        console.log("logout component -> logout");
+        try {
+            await userService.logout();
+        } catch (ex) {
+            toast.error(ex.response.data);
+        }
     }
     useEffect(() => {
         handleCookie();

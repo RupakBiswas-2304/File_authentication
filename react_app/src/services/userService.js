@@ -21,16 +21,13 @@ export async function getUser() {
         const user = await http.get(apiUrl + "/user", {
             withCredentials: true,
         });
-        if (user.data.status === 403) return null;
         return user.data.message;
     } catch (ex) {
         return null;
     }
 }
 export async function logout() {
-    const resp = await http.post(apiUrl + "/logout", { withCredentials: true });
-    const data = await getUser();
-    console.log("after logout", data);
+    await http.post(apiUrl + "/logout", { withCredentials: true });
     return true;
 }
 export async function updateUser(user) {
@@ -39,7 +36,7 @@ export async function updateUser(user) {
     data.append("l_name", user.l_name);
     data.append("phoneno", user.phoneno);
     try {
-        const resp = await http.post(apiUrl + "/profile", data, {
+        await http.post(apiUrl + "/profile", data, {
             withCredentials: true,
         });
     } catch (ex) {
